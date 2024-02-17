@@ -4,7 +4,7 @@ This online platform aims to address all the concerns, judgment, and comments ma
 
 # Disclaimer
 
-This project was recently restored for frontend demonstration purposes; hence, some features are intentionally disabled. To access complete full-stack (but depracated) project, please check v.1.0 branch.
+This project was recently restored for frontend demonstration purposes; hence, some features are intentionally disabled. To access complete full-stack (but depracated) project, please check [v.1.0 branch](https://github.com/jolsoncruz/DLSU-Community-Forum/tree/v.1.0).
 
 # Installation
 
