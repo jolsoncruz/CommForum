@@ -2,6 +2,10 @@
 
 This online platform aims to address all the concerns, judgment, and comments made by the students and alumni while maintaining a healthy and non-toxic environment in which the Lasallian Core Values are portrayed. To run the web program, simply go to https://dlsu-commforum.onrender.com/ or follow the instructions found **below** for local deployment.
 
+# Disclaimer
+
+This project was recently restored for frontend demonstration purposes; hence, some features are intentionally disabled. To access complete full-stack (but depracated) project, please check v.1.0 branch.
+
 # Installation
 
 1. Clone or download this repository.
