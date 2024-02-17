@@ -4,12 +4,13 @@
 
   <div class="col-sm-12 col-md-8">
   	{{#if college.founderBio}}
-	  	<h3>Brother Andrew Gonzales</h3>
-	    <h4 class="lead">A Visionary and Educator</h4>
+	  	<h3>Founder</h3>
 	    {{{college.founderBio}}}
   	{{/if}}
-	<h3>Vision Mission</h3>
-	{{{college.visionMission}}}
+	{{#if college.visionMission}}
+		<h3>Vision Mission</h3>
+		{{{college.visionMission}}}
+	{{/if}}
 	{{#if college.coreValues}}
 	    <h3>Core Values</h3>
 	    {{{college.coreValues}}}

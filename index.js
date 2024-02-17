@@ -1,15 +1,13 @@
 //Package Dependencies
-var mongodb = require('mongodb');
 var express = require('express');
-var sassMiddleware = require('node-sass-middleware');
 var path = require('path');
 var hbs = require('express-handlebars');
 var app = express();
-var mongoose = require('mongoose');
+
 var bodyParser = require('body-parser');
 var session = require('express-session');
 var bcrypt = require('bcrypt');
-var fileUpload = require('express-fileupload'); //npm i express-fileupload
+var fileUpload = require('express-fileupload');
 
 //Import Routers
 const rootRouter = require('./routes/rootRoutes');
@@ -51,13 +49,6 @@ app.engine('hbs',hbs({
 		}
     }
 }));
-app.use(sassMiddleware({
-    src: __dirname + '/public/scss',
-    dest: __dirname + '/public/css',
-    debug: true,
-    outputStyle: 'compressed',
-    prefix:  '/css'
-}));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(session({
 	secret: 'secret',
@@ -74,12 +65,12 @@ app.use('/', rootRouter);
 app.use('/colleges', collegesRouter);
 app.use('/professors', professorsRouter);
 app.use('/reviews', reviewsRouter);
-app.use('/profile', profileRouter);
+// app.use('/profile', profileRouter);
 app.use('/login', loginRouter);
-app.use('/logout', logoutRouter);
-app.use('/search', searchRouter);
-app.use('/cf-admin', cfAdminRouter);
-app.use('/cf-profile', cfProfileRouter);
+// app.use('/logout', logoutRouter);
+// app.use('/search', searchRouter);
+// app.use('/cf-admin', cfAdminRouter);
+// app.use('/cf-profile', cfProfileRouter);
 
 //Logical GET Methods
 app.get('/getCourseByCollege', function(req, res) {
@@ -353,69 +344,66 @@ app.post('/deleteUser', function (req, res) {
 	});
 });
 
-app.post('/deleteCollege', function (req, res) {
-
-	var id = req.body.id;
-
-	collegeModel.deleteOne({ _id: id }, function (err) {
-
-		if (err) {
-			console.log(err.errors);
-
-			result = {
-				success: false,
-				message: "College was not successfully deleted!"
-			}
-			res.send(result);
-		} else {
-			console.log("Successfully deleted college!");
-
-			result = {
-				success: true,
-				message: "College deleted!"
-			}
-			res.send(result);
-		}
-	});
-});
+// TODO: Re-implement
+// app.post('/deleteCollege', function (req, res) {
+// 	var id = req.body.id;
+// 	collegeModel.deleteOne({ _id: id }, function (err) {
+// 		if (err) {
+// 			console.log(err.errors);
+// 			result = {
+// 				success: false,
+// 				message: "College was not successfully deleted!"
+// 			}
+// 			res.send(result);
+// 		} else {
+// 			console.log("Successfully deleted college!");
+// 			result = {
+// 				success: true,
+// 				message: "College deleted!"
+// 			}
+// 			res.send(result);
+// 		}
+// 	});
+// });
 
 app.use(fileUpload());
 
-app.post('/addCollege', function (req, res) {
-	if (!req.files || Object.keys(req.files).length === 0) {
-		return res.status(400).send('No files were uploaded.');
-	} else {
-		var fileName = req.body.shortName;
-		var sampleFile = req.files.collegeLogo;
-		var ext = '.jpg';
+// TODO: Re-implement
+// app.post('/addCollege', function (req, res) {
+// 	if (!req.files || Object.keys(req.files).length === 0) {
+// 		return res.status(400).send('No files were uploaded.');
+// 	} else {
+// 		var fileName = req.body.shortName;
+// 		var sampleFile = req.files.collegeLogo;
+// 		var ext = '.jpg';
 
-		if (sampleFile.mimetype == 'image/png')
-			ext = '.png'
+// 		if (sampleFile.mimetype == 'image/png')
+// 			ext = '.png'
 
-		sampleFile.mv(__dirname + '/public/assets/colleges/' + fileName + ext, function (err) {
-			if (err) {
-				return res.status(500).send(err);
-			} else {
+// 		sampleFile.mv(__dirname + '/public/assets/colleges/' + fileName + ext, function (err) {
+// 			if (err) {
+// 				return res.status(500).send(err);
+// 			} else {
 
-				var newCollege = new collegeModel({
-						shortName: req.body.shortName,
-					 	longName: req.body.longName,
-					 	logo: '/assets/colleges/' + fileName + ext,
-					 	contactUs:{
-							telNum: req.body.telNum,
-							faxNum: req.body.faxNum
-						},
-						aboutUs: req.body.aboutUs
-					});
+// 				var newCollege = new collegeModel({
+// 						shortName: req.body.shortName,
+// 					 	longName: req.body.longName,
+// 					 	logo: '/assets/colleges/' + fileName + ext,
+// 					 	contactUs:{
+// 							telNum: req.body.telNum,
+// 							faxNum: req.body.faxNum
+// 						},
+// 						aboutUs: req.body.aboutUs
+// 					});
 
-				newCollege.save(function(err, comment) {
+// 				newCollege.save(function(err, comment) {
 
-				});
-			}
-			res.redirect('/cf-admin/colleges');
-		});
-	}
-});
+// 				});
+// 			}
+// 			res.redirect('/cf-admin/colleges');
+// 		});
+// 	}
+// });
 
 app.post('/changePassword', function (req, res) {
 	var studentRef = req.session.studentRef;
