@@ -2,7 +2,7 @@ const professorModel = [
     {
         profNumber: 1,
         college: "CCS",
-        gender: "Male",
+        gender: "male",
         profName: "Jolson Cruz",
         profCourse: "CS 101",
         email: "jolson.cruz@dlsu.edu.ph"
@@ -10,7 +10,7 @@ const professorModel = [
     {
         profNumber: 2,
         college: "CLA",
-        gender: "Female",
+        gender: "female",
         profName: "Emily Johnson",
         profCourse: "ENG 201",
         email: "emily.johnson@dlsu.edu.ph"
@@ -18,7 +18,7 @@ const professorModel = [
     {
         profNumber: 3,
         college: "COB",
-        gender: "Male",
+        gender: "male",
         profName: "John Smith",
         profCourse: "FIN 301",
         email: "john.smith@dlsu.edu.ph"
@@ -26,7 +26,7 @@ const professorModel = [
     {
         profNumber: 4,
         college: "SOE",
-        gender: "Male",
+        gender: "male",
         profName: "Michael Garcia",
         profCourse: "ME 101",
         email: "michael.garcia@dlsu.edu.ph"
@@ -34,7 +34,7 @@ const professorModel = [
     {
         profNumber: 5,
         college: "COE",
-        gender: "Female",
+        gender: "female",
         profName: "Sophia Martinez",
         profCourse: "CE 101",
         email: "sophia.martinez@dlsu.edu.ph"
@@ -42,7 +42,7 @@ const professorModel = [
     {
         profNumber: 6,
         college: "CED",
-        gender: "Male",
+        gender: "male",
         profName: "David Rodriguez",
         profCourse: "EDUC 101",
         email: "david.rodriguez@dlsu.edu.ph"
@@ -50,7 +50,7 @@ const professorModel = [
     {
         profNumber: 7,
         college: "COS",
-        gender: "Male",
+        gender: "male",
         profName: "Daniel Lee",
         profCourse: "BIO 101",
         email: "daniel.lee@dlsu.edu.ph"
@@ -58,7 +58,7 @@ const professorModel = [
     {
         profNumber: 8,
         college: "CCS",
-        gender: "Female",
+        gender: "female",
         profName: "Isabella Thompson",
         profCourse: "CS 201",
         email: "isabella.thompson@dlsu.edu.ph"
@@ -66,7 +66,7 @@ const professorModel = [
     {
         profNumber: 9,
         college: "CLA",
-        gender: "Male",
+        gender: "male",
         profName: "Liam Wilson",
         profCourse: "PHIL 201",
         email: "liam.wilson@dlsu.edu.ph"
@@ -74,7 +74,7 @@ const professorModel = [
     {
         profNumber: 10,
         college: "COB",
-        gender: "Female",
+        gender: "female",
         profName: "Olivia Clark",
         profCourse: "MKT 201",
         email: "olivia.clark@dlsu.edu.ph"
@@ -82,7 +82,7 @@ const professorModel = [
     {
         profNumber: 11,
         college: "SOE",
-        gender: "Male",
+        gender: "male",
         profName: "Ethan Anderson",
         profCourse: "CHE 201",
         email: "ethan.anderson@dlsu.edu.ph"
@@ -90,7 +90,7 @@ const professorModel = [
     {
         profNumber: 12,
         college: "COE",
-        gender: "Female",
+        gender: "female",
         profName: "Chloe Baker",
         profCourse: "EE 201",
         email: "chloe.baker@dlsu.edu.ph"
@@ -98,7 +98,7 @@ const professorModel = [
     {
         profNumber: 13,
         college: "CED",
-        gender: "Male",
+        gender: "male",
         profName: "Noah Young",
         profCourse: "EDUC 201",
         email: "noah.young@dlsu.edu.ph"
@@ -106,7 +106,7 @@ const professorModel = [
     {
         profNumber: 14,
         college: "COS",
-        gender: "Female",
+        gender: "female",
         profName: "Ava White",
         profCourse: "CHEM 201",
         email: "ava.white@dlsu.edu.ph"
@@ -114,7 +114,7 @@ const professorModel = [
     {
         profNumber: 15,
         college: "CCS",
-        gender: "Male",
+        gender: "male",
         profName: "Lucas Hall",
         profCourse: "CS 301",
         email: "lucas.hall@dlsu.edu.ph"
@@ -122,7 +122,7 @@ const professorModel = [
     {
         profNumber: 16,
         college: "CLA",
-        gender: "Female",
+        gender: "female",
         profName: "Mia Martinez",
         profCourse: "PSYCH 301",
         email: "mia.martinez@dlsu.edu.ph"
@@ -130,7 +130,7 @@ const professorModel = [
     {
         profNumber: 17,
         college: "COB",
-        gender: "Male",
+        gender: "male",
         profName: "Alexander Carter",
         profCourse: "ACCTG 301",
         email: "alexander.carter@dlsu.edu.ph"
@@ -138,7 +138,7 @@ const professorModel = [
     {
         profNumber: 18,
         college: "SOE",
-        gender: "Female",
+        gender: "female",
         profName: "Emma Adams",
         profCourse: "ME 301",
         email: "emma.adams@dlsu.edu.ph"
@@ -146,7 +146,7 @@ const professorModel = [
     {
         profNumber: 19,
         college: "COE",
-        gender: "Male",
+        gender: "male",
         profName: "Mason Thomas",
         profCourse: "EE 301",
         email: "mason.thomas@dlsu.edu.ph"
@@ -154,7 +154,7 @@ const professorModel = [
     {
         profNumber: 20,
         college: "CED",
-        gender: "Female",
+        gender: "female",
         profName: "Luna Garcia",
         profCourse: "EDUC 301",
         email: "luna.garcia@dlsu.edu.ph"
@@ -162,7 +162,7 @@ const professorModel = [
     {
         profNumber: 21,
         college: "COS",
-        gender: "Male",
+        gender: "male",
         profName: "Elijah Parker",
         profCourse: "PHYS 301",
         email: "elijah.parker@dlsu.edu.ph"
@@ -170,7 +170,7 @@ const professorModel = [
     {
         profNumber: 22,
         college: "CCS",
-        gender: "Female",
+        gender: "female",
         profName: "Lily Adams",
         profCourse: "CS 401",
         email: "lily.adams@dlsu.edu.ph"
@@ -178,7 +178,7 @@ const professorModel = [
     {
         profNumber: 23,
         college: "CLA",
-        gender: "Male",
+        gender: "male",
         profName: "Owen Turner",
         profCourse: "HIST 401",
         email: "owen.turner@dlsu.edu.ph"
@@ -186,7 +186,7 @@ const professorModel = [
     {
         profNumber: 24,
         college: "COB",
-        gender: "Female",
+        gender: "female",
         profName: "Sophie Mitchell",
         profCourse: "FIN 401",
         email: "sophie.mitchell@dlsu.edu.ph"
@@ -194,7 +194,7 @@ const professorModel = [
     {
         profNumber: 25,
         college: "SOE",
-        gender: "Male",
+        gender: "male",
         profName: "Gabriel Rivera",
         profCourse: "CE 401",
         email: "gabriel.rivera@dlsu.edu.ph"
@@ -202,7 +202,7 @@ const professorModel = [
     {
         profNumber: 26,
         college: "COE",
-        gender: "Female",
+        gender: "female",
         profName: "Zoe Baker",
         profCourse: "EE 401",
         email: "zoe.baker@dlsu.edu.ph"
@@ -210,7 +210,7 @@ const professorModel = [
     {
         profNumber: 27,
         college: "CED",
-        gender: "Male",
+        gender: "male",
         profName: "Nathan White",
         profCourse: "EDUC 401",
         email: "nathan.white@dlsu.edu.ph"
@@ -218,7 +218,7 @@ const professorModel = [
     {
         profNumber: 28,
         college: "COS",
-        gender: "Female",
+        gender: "female",
         profName: "Grace Moore",
         profCourse: "BIO 401",
         email: "grace.moore@dlsu.edu.ph"
@@ -226,7 +226,7 @@ const professorModel = [
     {
         profNumber: 29,
         college: "CCS",
-        gender: "Male",
+        gender: "male",
         profName: "Ethan Hall",
         profCourse: "CS 501",
         email: "ethan.hall@dlsu.edu.ph"
@@ -234,7 +234,7 @@ const professorModel = [
     {
         profNumber: 30,
         college: "CLA",
-        gender: "Female",
+        gender: "female",
         profName: "Chloe Garcia",
         profCourse: "ENG 501",
         email: "chloe.garcia@dlsu.edu.ph"
@@ -242,7 +242,7 @@ const professorModel = [
     {
         profNumber: 31,
         college: "COB",
-        gender: "Male",
+        gender: "male",
         profName: "David Rodriguez",
         profCourse: "MKT 501",
         email: "david.rodriguez@dlsu.edu.ph"
@@ -250,7 +250,7 @@ const professorModel = [
     {
         profNumber: 32,
         college: "SOE",
-        gender: "Female",
+        gender: "female",
         profName: "Emma Allen",
         profCourse: "ME 501",
         email: "emma.allen@dlsu.edu.ph"
@@ -258,7 +258,7 @@ const professorModel = [
     {
         profNumber: 33,
         college: "COE",
-        gender: "Male",
+        gender: "male",
         profName: "Matthew Perez",
         profCourse: "CE 501",
         email: "matthew.perez@dlsu.edu.ph"
@@ -266,7 +266,7 @@ const professorModel = [
     {
         profNumber: 34,
         college: "CED",
-        gender: "Female",
+        gender: "female",
         profName: "Aria Thompson",
         profCourse: "EDUC 501",
         email: "aria.thompson@dlsu.edu.ph"
@@ -274,7 +274,7 @@ const professorModel = [
     {
         profNumber: 35,
         college: "COS",
-        gender: "Male",
+        gender: "male",
         profName: "James Hernandez",
         profCourse: "PHYS 501",
         email: "james.hernandez@dlsu.edu.ph"
@@ -282,7 +282,7 @@ const professorModel = [
     {
         profNumber: 36,
         college: "CCS",
-        gender: "Female",
+        gender: "female",
         profName: "Mia Johnson",
         profCourse: "CS 601",
         email: "mia.johnson@dlsu.edu.ph"
@@ -290,7 +290,7 @@ const professorModel = [
     {
         profNumber: 37,
         college: "CLA",
-        gender: "Male",
+        gender: "male",
         profName: "Noah Martinez",
         profCourse: "PHIL 601",
         email: "noah.martinez@dlsu.edu.ph"
@@ -298,7 +298,7 @@ const professorModel = [
     {
         profNumber: 38,
         college: "COB",
-        gender: "Female",
+        gender: "female",
         profName: "Lily Clark",
         profCourse: "FIN 601",
         email: "lily.clark@dlsu.edu.ph"
@@ -306,7 +306,7 @@ const professorModel = [
     {
         profNumber: 39,
         college: "SOE",
-        gender: "Male",
+        gender: "male",
         profName: "Elijah Martin",
         profCourse: "CHE 601",
         email: "elijah.martin@dlsu.edu.ph"
@@ -314,7 +314,7 @@ const professorModel = [
     {
         profNumber: 40,
         college: "COE",
-        gender: "Female",
+        gender: "female",
         profName: "Avery Perez",
         profCourse: "EE 601",
         email: "avery.perez@dlsu.edu.ph"
@@ -322,7 +322,7 @@ const professorModel = [
     {
         profNumber: 41,
         college: "CED",
-        gender: "Male",
+        gender: "male",
         profName: "Luke Hernandez",
         profCourse: "EDUC 601",
         email: "luke.hernandez@dlsu.edu.ph"
@@ -330,7 +330,7 @@ const professorModel = [
     {
         profNumber: 42,
         college: "COS",
-        gender: "Female",
+        gender: "female",
         profName: "Grace Thompson",
         profCourse: "CHEM 601",
         email: "grace.thompson@dlsu.edu.ph"
@@ -338,7 +338,7 @@ const professorModel = [
     {
         profNumber: 43,
         college: "CCS",
-        gender: "Male",
+        gender: "male",
         profName: "Lucas White",
         profCourse: "CS 701",
         email: "lucas.white@dlsu.edu.ph"
@@ -346,7 +346,7 @@ const professorModel = [
     {
         profNumber: 44,
         college: "CLA",
-        gender: "Female",
+        gender: "female",
         profName: "Sophia Garcia",
         profCourse: "ENG 701",
         email: "sophia.garcia@dlsu.edu.ph"
@@ -354,7 +354,7 @@ const professorModel = [
     {
         profNumber: 45,
         college: "COB",
-        gender: "Male",
+        gender: "male",
         profName: "Daniel Rodriguez",
         profCourse: "MKT 701",
         email: "daniel.rodriguez@dlsu.edu.ph"
@@ -362,7 +362,7 @@ const professorModel = [
     {
         profNumber: 46,
         college: "SOE",
-        gender: "Female",
+        gender: "female",
         profName: "Emma Turner",
         profCourse: "ME 701",
         email: "emma.turner@dlsu.edu.ph"
@@ -370,7 +370,7 @@ const professorModel = [
     {
         profNumber: 47,
         college: "COE",
-        gender: "Male",
+        gender: "male",
         profName: "Nathan Adams",
         profCourse: "CE 701",
         email: "nathan.adams@dlsu.edu.ph"
@@ -378,7 +378,7 @@ const professorModel = [
     {
         profNumber: 48,
         college: "CED",
-        gender: "Female",
+        gender: "female",
         profName: "Ava Wilson",
         profCourse: "EDUC 701",
         email: "ava.wilson@dlsu.edu.ph"
@@ -386,7 +386,7 @@ const professorModel = [
     {
         profNumber: 49,
         college: "COS",
-        gender: "Male",
+        gender: "male",
         profName: "Ethan Harris",
         profCourse: "BIO 701",
         email: "ethan.harris@dlsu.edu.ph"
@@ -394,7 +394,7 @@ const professorModel = [
     {
         profNumber: 50,
         college: "CCS",
-        gender: "Female",
+        gender: "female",
         profName: "Olivia Hall",
         profCourse: "CS 801",
         email: "olivia.hall@dlsu.edu.ph"
