@@ -27,8 +27,8 @@
 				  	  		<span class="d-inline-block text-truncate" style="max-width: 200px;">{{this.reviewContent}}</span>
 				  	    </td>
 				      	<td>{{this.profCourse}}</td>
-				       	<td>{{this.studentRef.studentName}}</td>
-				       	<td class="text-center"><a class="btn btn-primary btn-sm text-white" href="/reviews/{{this._id}}">Go to Review</a></td>
+				       	<td>{{this.studentName}}</td>
+				       	<td class="text-center"><a class="btn btn-primary btn-sm text-white" href="/reviews/{{this.reviewId}}">Go to Review</a></td>
 			    	</tr>
 		      	{{/each}}
 			</tbody>
@@ -57,7 +57,7 @@
 			            <textarea class="form-control col-sm-7" id="revContent" name="revContent" rows="3"></textarea>
 			        </div>
 			        <div class="text-center">
-			        	<button type="button" class="btn btn-primary mt-0 mb-2 text-center" id="addReview" name="addReview">Post Review</button>
+			        	<button type="button" class="btn btn-primary mt-0 mb-2 text-center" id="addReview" name="addReview" disabled>Post Review</button>
 			    	</div>
 		    	</form>
 		    	<p id="msg" class="text-danger mb-0 mt-2 text-center"></p>

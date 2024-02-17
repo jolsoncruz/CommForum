@@ -1,7 +1,7 @@
 //Import Models
 const collegeModel = require('../models/college');
 const { professorModel } = require('../models/professor');
-// const reviewModel = require('../models/review');
+const { getRecentReviews } = require('../models/review');
 
 exports.getAllProfs = function(req, res){
     const professors = professorModel;
@@ -30,6 +30,7 @@ exports.getAllProfs = function(req, res){
 exports.getProfData =  function(req, res){
     const professor = professorModel.find(professor => professor.profNumber == req.params.id);
     const college = collegeModel.find(college => college.shortName === professor.college);
+    const reviews = getRecentReviews().filter(review => review.profNumber == professor.profNumber);
 
     if(professor === null){
         res.render('frontend/error',{
@@ -39,43 +40,19 @@ exports.getProfData =  function(req, res){
         });
     }
     else{
-        // reviewModel.getProf({profRef: profData._id}, function(reviews){
-            res.render('frontend/profpage',{
-                session: req.session,
-                studentRef: req.session.studentRef,
-                studentId: req.session.idNum,
-                professor: professor,
-                college: college,
-                reviews: [],
-                jumbotronImage: '/assets/headers/profpage_header.jpg',
-                jumbotronHeader: professor.profName,
-                jumbotronMessage: 'An exemplary Lasallian educator who teach minds, touch hearts, and transform lives by diligently teaching ' + professor.profCourse + ' from the ' + college.longName + '.',
-                jumbotronLink: '/',
-                jumbotronBtn: 'Back to Homepage',
-                title: professor.profName
-            });
-        // });
+        res.render('frontend/profpage',{
+            session: req.session,
+            studentRef: req.session.studentRef,
+            studentId: req.session.idNum,
+            professor: professor,
+            college: college,
+            reviews: reviews,
+            jumbotronImage: '/assets/headers/profpage_header.jpg',
+            jumbotronHeader: professor.profName,
+            jumbotronMessage: 'An exemplary Lasallian educator who teach minds, touch hearts, and transform lives by diligently teaching ' + professor.profCourse + ' from the ' + college.longName + '.',
+            jumbotronLink: '/',
+            jumbotronBtn: 'Back to Homepage',
+            title: professor.profName
+        });
     }
 }
-// exports.addProf = function(req, rest){
-
-// 	var newProfessor = new professorModel({
-//     	profName: req.body.profName,
-//     	gender: req.body.gender,
-//     	college: req.body.college,
-//     	profCourse: req.body.profCourse
-// 	});
-
-// 	professorModel.create(newProfessor, function(err, newProfessor ){
-// 		if (err) {
-// 			console.log(err.errors);
-// 		    result = { success: false, message: "Professor was not added!" }
-// 		    res.send(result);
-// 		} else {
-// 			console.log("Successfully added professor!");
-// 			console.log(newProfessor);
-// 			result = { success: true, message: "Professor has succesfully been added!" }
-// 			res.send(result);
-// 		}
-// 	});
-// }

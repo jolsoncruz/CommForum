@@ -16,7 +16,8 @@ exports.getAllColleges = function(req, res){
 };
 
 exports.getCollegeData =  function(req, res){
-	const college = collegeModel.find(college => college.shortName === req.params.college);
+	const link = req.params.college.toUpperCase();
+	const college = collegeModel.find(college => college.shortName === link);
 	if(!college){
 		res.render('frontend/error',{
 			session: req.session,

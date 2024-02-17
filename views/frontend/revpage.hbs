@@ -4,12 +4,12 @@
 	<div class="col-sm-12 col-md-8">
     	<div class="card mb-4">
     		<div class="card-header bg-gradient font-weight-bold">
-    			RN: {{review._id}}
+    			RN: {{review.reviewId}}
   			</div>
 	      	<div class="card-body border-bottom">
 	      		<blockquote class="blockquote">
 					<p class="mb-0">{{review.reviewContent}}</p>
-					<footer class="blockquote-footer">Submitted by <cite title="Source Title">{{review.studentRef.studentName}}</cite></footer>
+					<footer class="blockquote-footer">Submitted by <cite title="Source Title">{{review.studentName}}</cite></footer>
 				</blockquote>
 	    	</div>
 		</div>
@@ -21,9 +21,9 @@
 				<div class="card-body">
 					{{#if comment}}
 						{{#each comment}}	
-						<div class="m-0" id="{{this._id}}">
+						<div class="m-0">
 							<p class="mb-0" align="left">{{this.commentContent}}</p>
-							<p align="left">-<cite title="Source Title">{{this.studentRef.studentName}}</cite></p>
+							<p align="left">-<cite title="Source Title">{{this.studentId}}</cite></p>
 						</div>
 				    	{{/each}}
 					{{else}}
@@ -41,18 +41,18 @@
   			</div>
 	      	<div class="card-body">
 		      	<form>
-		     	 	<p id="reviewRef" name="reviewRef" hidden>{{review._id}}</p>
+		     	 	<p id="reviewRef" name="reviewRef" hidden>{{review.reviewId}}</p>
 		      		<p id="studentRef" name="studentRef" hidden>{{session.studentRef}}</p>
 		        	<div class="form-group row">
 			            <label for="quickProf" class="col-sm-4 col-form-label">Professor</label>
 			            <select class="custom-select col-sm-7" disabled id="profRef">
-			              <option selected>{{review.profRef.profName}}</option>
+			              <option selected>{{professor.profName}}</option>
 			        	</select>
 			        </div>
 			        <div class="form-group row">
 			            <label for="quickProf" class="col-sm-4 col-form-label">RN</label>
 			            <select class="custom-select col-sm-7" disabled id="quickProf">
-			              <option selected>{{review._id}}</option>
+			              <option selected>{{review.reviewId}}</option>
 			        	</select>
 			        </div>
 		          	<div class="form-group row">
@@ -60,7 +60,7 @@
 			            <textarea class="form-control col-sm-7" id="commentContent" rows="3"></textarea>
 			        </div>
 			        <div class="text-center">
-			            <button type="submit" id = "addComment" name ="addComment" class="btn btn-primary mt-0 mb-2">Post Comment</button>
+			            <button type="submit" id = "addComment" name ="addComment" class="btn btn-primary mt-0 mb-2" disabled>Post Comment</button>
 			        </div>
 		    	</form>
 	    	</div>

@@ -164,50 +164,50 @@ window.addEventListener('load', () => {
 
     $.get('/getProfByCourse', selectedCourse, function(data, status) {
       $.each(data, function(index, value){
-        profItem += "<option>" + value.profName + "</option>";
+        profItem += "<option>" + value + "</option>";
       });
       prof.innerHTML = profItem;
     });
-    
-    $('#postReview').click(function() {
-      var newReview = {
-        profName: $('#quickProf').find(":selected").text(),
-        profCourse: $('#quickCourse').find(":selected").text(),
-        studentRef: window.studentRef,
-        studentId: window.studentId,
-        reviewContent: $("textarea#revContent").val()
-      };
+s
+    // $('#postReview').click(function() {
+    //   var newReview = {
+    //     profName: $('#quickProf').find(":selected").text(),
+    //     profCourse: $('#quickCourse').find(":selected").text(),
+    //     studentRef: window.studentRef,
+    //     studentId: window.studentId,
+    //     reviewContent: $("textarea#revContent").val()
+    //   };
 
-      $.get('/getProfDetails', newReview, function(data, status) {
-        var profRef = data._id;
-        var profNumber = data.profNumber;
+    //   $.get('/getProfDetails', newReview, function(data, status) {
+    //     var profRef = data._id;
+    //     var profNumber = data.profNumber;
 
-        var finalReview = {
-          profRef: profRef,
-          profNumber: profNumber,
-          profCourse: newReview.profCourse,
-          studentRef: newReview.studentRef,
-          studentId: newReview.studentId,
-          reviewContent: newReview.reviewContent
-        }
+    //     var finalReview = {
+    //       profRef: profRef,
+    //       profNumber: profNumber,
+    //       profCourse: newReview.profCourse,
+    //       studentRef: newReview.studentRef,
+    //       studentId: newReview.studentId,
+    //       reviewContent: newReview.reviewContent
+    //     }
 
-        $.post('/addReview', finalReview, function(data, status) {
-          console.log(data);
-          if (data.success) {
-            $('#msg').addClass('text-success');
-            $('#msg').removeClass('text-danger');
-            $('#msg').text(data.message);
-            $('textarea#revContent').val('');
-            var delay = 500; 
-            setTimeout(function(){location.reload(true)}, delay);
-          } else {
-            $('#msg').addClass('text-danger');
-            $('#msg').removeClass('text-success');
-            $('#msg').text(data.message);
-          }
-        });
-      });
-    });
+    //     $.post('/addReview', finalReview, function(data, status) {
+    //       console.log(data);
+    //       if (data.success) {
+    //         $('#msg').addClass('text-success');
+    //         $('#msg').removeClass('text-danger');
+    //         $('#msg').text(data.message);
+    //         $('textarea#revContent').val('');
+    //         var delay = 500; 
+    //         setTimeout(function(){location.reload(true)}, delay);
+    //       } else {
+    //         $('#msg').addClass('text-danger');
+    //         $('#msg').removeClass('text-success');
+    //         $('#msg').text(data.message);
+    //       }
+    //     });
+    //   });
+    // });
   });
 
   //FRONTEND & BACKEND - EDIT/DELETE FUNCT POST / COMMENT / PROF/ USER /COLLEGE

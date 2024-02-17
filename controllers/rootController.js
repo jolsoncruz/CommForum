@@ -4,9 +4,11 @@ const { getRandomProfessors } = require('../models/professor');
 const { getRecentReviews } = require('../models/review');
 
 exports.loadHome = function(req, res){
+	req.session.loggedin = true;
+	req.session.studentId = 1170001;
+	req.session.nickname = 'John';
 	const recentReviews = getRecentReviews(-10);
 	const featuredProfessors = getRandomProfessors(3);
-	
 	res.render('frontend/home',{
 		session: req.session,
 		colleges: collegeModel,

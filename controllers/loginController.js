@@ -8,6 +8,7 @@ exports.checker = function(req,res) {
 	}
 	else {
 		res.render('login',{
+			session: req.session,
 			title: 'Log In',
 			layout: 'authenticate'
 		});

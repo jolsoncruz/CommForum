@@ -29,7 +29,7 @@
 			        <p id="msgEd1" class="text-danger mb-0 mt-2 text-center"></p>
 		      	</div>
 			    <div class="modal-footer d-flex justify-content-center">
-			 	   <button type="button" id ="savePost" class="btn btn-primary btn-sm text-white">Save Post</button>
+			 	   <button type="button" id ="savePost" class="btn btn-primary btn-sm text-white" disabled>Save Post</button>
 			    </div>
 	    	</form>
 		</div>
@@ -64,7 +64,7 @@
             		<p id="msgEd2" class="text-danger mb-0 mt-2 text-center"></p>
           		</div>
         		<div class="modal-footer d-flex justify-content-center">
-         			<button type="button" id ="saveComment" class="btn btn-primary btn-sm text-white">Save Comment</button>
+         			<button type="button" id ="saveComment" class="btn btn-primary btn-sm text-white" disabled>Save Comment</button>
         		</div>
       		</form>
     	</div>
@@ -91,7 +91,7 @@
 		    	</div>
 		    	<input type="hidden" id="modalDeleteReviewRef" name="modalDeleteReviewRef">
     			<div class="modal-footer d-flex justify-content-center">
-        			<button class="btn btn-primary btn-sm text-white" id="deletePost">Delete Post</button>
+        			<button class="btn btn-primary btn-sm text-white" id="deletePost" disabled>Delete Post</button>
       			</div>
     		</div>
   		</div>
@@ -118,7 +118,7 @@
 		    	</div>
 		    	<input type="hidden" id="modalDeleteCommentRef" name="modalDeleteCommentRef">
 		   		<div class="modal-footer d-flex justify-content-center">
-		       		<button class="btn btn-primary btn-sm text-white" id ="deleteComment">Delete Comment</button>
+		       		<button class="btn btn-primary btn-sm text-white" id ="deleteComment" disabled>Delete Comment</button>
 		  		</div>
     		</div>
   		</div>
@@ -158,22 +158,22 @@
 		                    	<span class="d-inline-block text-truncate"  style="max-width: 200px;">{{this.reviewContent}}</span>
 		                  	</td>
 		                  	<td>{{this.profCourse}}</td>
-		                  	<td>{{this.studentRef.studentName}}</td>
+		                  	<td>{{this.studentName}}</td>
 		                  	<td class="text-center">
 		                     	<button class="btn btn-primary btn-sm text-white dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action</button>
 		                     	<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 		                        	<button class="dropdown-item" class="text-center" data-toggle="modal" id= "modalEditPostSubmit" data-target="#modalEditPost" 
 		                           	data-funct= "editPost"
-		                           	data-id= "{{this._id}}"
+		                           	data-id= "{{this.reviewId}}"
 		                           	data-content = "{{this.reviewContent}}"
 		                           	data-course = "{{this.profCourse}}" 
-		                           	data-profname = "{{this.profRef.profName}}"
+		                           	data-profname = "{{this.profName}}"
 		                           	> Edit Post </button>
 			                        <button class="dropdown-item" class="text-center" data-toggle="modal" data-target="#modalDeletePost"
 			                        data-funct= "deletePost"
-			                        data-id= "{{this._id}}"
+			                        data-id= "{{this.reviewId}}"
 			                        >Delete Post</button>
-			                        <a class="dropdown-item" class="text-center" href="/reviews/{{this._id}}">Go to Review </a>
+			                        <a class="dropdown-item" class="text-center" href="/reviews/{{this.reviewId}}">Go to Review </a>
 		                    	</div>
 		                  	</td>
 		               </form>
@@ -208,23 +208,23 @@
 		                  	<td>
 		                    	<span class="d-inline-block text-truncate"  style="max-width: 200px;">{{this.commentContent}}</span>
 		                  	</td>
-		                  	<td>{{this.reviewRef.profCourse}}</td>
-		                  	<td>{{this.profDetails.profName}}</td>
+		                  	<td>BIO 401</td>
+		                  	<td>Grace Moore</td>
 		                  	<td class="text-center">
 		                    	<button class="btn btn-primary btn-sm text-white dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action</button>
 		                     	<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 		                        	<button class="dropdown-item" class="text-center" data-toggle="modal" data-target="#modalEditComment" 
 		                           	data-funct = "editComment"
-		                           	data-id= "{{this._id}}"
+		                           	data-id= "{{this.reviewId}}"
 		                           	data-content = "{{this.commentContent}}"
 		                           	data-course = "{{this.reviewRef.profCourse}}" 
-		                           	data-profname = "{{this.profDetails.profName}}"
+		                           	data-profname = "{{this.profName}}"
 		                           	> Edit Comment </button>
 		                        	<button class="dropdown-item" class="text-center" data-toggle="modal" data-target="#modalDeleteComment"
 		                            data-funct ="deleteComment"
-		                            data-id= "{{this._id}}"
+		                            data-id= "{{this.reviewId}}"
 		                          	>Delete Comment</button>
-		                        	<a class="dropdown-item" class="text-center" href="/reviews/{{this.reviewRef._id}}#{{this._id}}">Go to Comment</a>
+		                        	<a class="dropdown-item" class="text-center" href="/reviews/{{this.reviewId}}">Go to Comment</a>
 		                     	</div>
 		                  </td>
 		               </form>
@@ -259,7 +259,7 @@
 		            	<input type="password" id="confirmPassword" class="form-control col-sm-7 mt-2" placeholder="Confirm Password"> 
 		          	</div>
 		          	<div class="text-center">
-		            	<button type="button" id="changePassword" class="btn btn-primary mt-0 mb-2">Change Password</button>
+		            	<button type="button" id="changePassword" class="btn btn-primary mt-0 mb-2" disabled>Change Password</button>
 		          	</div>
 		    	</form>
 		    	<p id="msg" class="text-danger mb-0 mt-2 text-center"></p>

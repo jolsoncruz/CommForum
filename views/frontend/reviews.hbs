@@ -14,7 +14,6 @@
 			  		<th scope="col">Student ID</th>
 			   		<th scope="col">Reviewer</th>
 				   	<th scope="col">Professor</th>
-			   		<th scope="col">No. of Comments</th>
 				   	<th scope="col">Action</th>
 			   	</tr>
 			</thead>
@@ -24,8 +23,8 @@
 				    <td>{{this.studentId}}</td>
 				    <td>{{this.studentName}}</td>
 				    <td>{{this.profName}}</td>
-				    <td>{{this.count}}</td>
-				    <td><a class="btn btn-primary btn-sm text-white" href="/reviews/{{this._id}}">Go to Review</a></td>
+					{{!-- TODO: --}}
+				    <td><a class="btn btn-primary btn-sm text-white" href="/reviews/{{this.reviewId}}">Go to Review</a></td>
 				</tr>
 			{{/each}}
 			</tbody>
@@ -70,7 +69,7 @@
 		            	<textarea class="form-control col-sm-7" id="revContent" name="revContent" rows="3"></textarea>
 		          	</div>
 		          	<div class="text-center">
-		            	<button type="button" class="btn btn-primary mt-0 mb-2" id="postReview" name="postReview">Post Review</button>
+		            	<button type="button" class="btn btn-primary mt-0 mb-2" id="postReview" name="postReview" disabled>Post Review</button>
 		          	</div>
 		       </form>
 	        <p id="msg" class="text-danger mb-0 mt-2 text-center"></p>
