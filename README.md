@@ -1,28 +1,17 @@
 # Welcome to DLSU CommForum!
 
-This online platform aims to address all the concerns, judgment, and comments made by the students and alumni while maintaining a healthy and non-toxic environment in which the Lasallian Core Values are portrayed. To run the web program, simply follow the instructions found **below**.
-
-This Machine Project was made by **Jolson Cruz**, **Ryan Garcia**, and **Joeme Santos** from **CCAPDEV S14**. 
-
-
-# Status
-
-This project is still **under development** and will be constantly updated once it's ready for **live implementation**.
-
+This online platform aims to address all the concerns, judgment, and comments made by the students and alumni while maintaining a healthy and non-toxic environment in which the Lasallian Core Values are portrayed. To run the web program, simply go to https://dlsu-commforum.onrender.com/ or follow the instructions found **below** for local deployment.
 
 # Installation
 
 1. Clone or download this repository.
 2. Use GitBash or CMD to open the cloned repository.
-3. Run `npm install`.
+3. Run `npm i`.
 4. Run `node index.js`.
 5. You're ready to go!
 
 # Heroku Link
-- https://dlsu-comforum-mvc-s14gr1.herokuapp.com/
-
-# Repository without MVC
-- https://github.com/Ryakeee/FINALMERGE
+- [https://dlsu-comforum-mvc-s14gr1.herokuapp.com/](https://dlsu-commforum.onrender.com/)
 
 # UML
 
