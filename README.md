@@ -1,4 +1,4 @@
-<img src="public/assets/logo_box_green.jpg" alt="DLSU Community Forum" width="500"/>
+<img src="public/assets/logo_box_green.jpg" alt="DLSU Community Forum" width="300"/>
 
 # Welcome to DLSU CommForum!
 
