@@ -1,3 +1,5 @@
+<img src="public/assets/logo_box_green.jpg" alt="DLSU Community Forum" width="500"/>
+
 # Welcome to DLSU CommForum!
 
 This online platform aims to address all the concerns, judgment, and comments made by the students and alumni while maintaining a healthy and non-toxic environment in which the Lasallian Core Values are portrayed. To run the web program, simply go to https://dlsu-commforum.onrender.com/ or follow the instructions found **below** for local deployment.
